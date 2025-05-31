@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Press+Start+2P&family=Share+Tech&display=swap"
+        rel="stylesheet">
+    <title>PixelForge Studios</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="Logo">
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#trailers">Trailer</a></li>
+                <li><a href="#comunidade">Comunidade</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button id="openModal"> Abrir Modal</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-inner">
+            <h2> Tutorial</h2>
+            <p>
+                Descrição
+            </p>
+            <button id="closeModal"> Fechar</button>
+        </div>
+    </div>
+
+    <section id="home">
+        <video class="background-video" autoplay muted loop>
+            <source src="assets/videos/abertura_home.mp4" type="video/mp4">
+        </video>
+        <div class="home-hero-text">
+            <h1 class="neon-text">Bem-vindo ao PixelForge Studios</h1>
+            <p>
+                <span class="destaque-neon"> Forje sua própria lenda</span> enquanto explora os melhores jogos!<br>
+            </p>
+            <button class="btn-roxo-rgb" onclick="location.href='#sobre'">Descubra aqui</button>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre-section">
+        <div class="sobre-img">
+            <img src="assets/img/equipe.jpeg" alt="Equipe PixelForge Studios">
+        </div>
+        <div class="sobre-texto">
+            <h2 class="neon-fixo">Quem é a PixelForge Studios?</h2>
+            <p>
+                Fundada por apaixonados por games, a PixelForge Studios nasceu com o objetivo de criar experiências
+                únicas e inovadoras para jogadores de todas as idades.<br>
+                Nossa jornada começou em 2020, quando um grupo de amigos decidiu transformar sonhos em pixels e ideias
+                em aventuras inesquecíveis.<br>
+                Desde então, construímos um catálogo variado de jogos, com trailers cinematográficos, uma comunidade
+                ativa e espaço para parcerias criativas.<br>
+                Desenvolvemos cada projeto com dedicação, talento e muito amor pelo universo gamer, sempre ouvindo nossa
+                comunidade e buscando superar limites.<br><br>
+                <strong>Junte-se a nós e faça parte dessa história!</strong>
+            </p>
+        </div>
+    </section>
+
+    <section id="catalogo">
+        <div class="games">
+            <h2>Catálogo de Jogos</h2>
+            <p>Explore nossos jogos mais recentes e populares.</p>
+            <ul id="filtros-categorias">
+                <li class="list active" data-categoria="todos">Todos</li>
+                <li class="list" data-categoria="acao">Ação</li>
+                <li class="list" data-categoria="arcade">Arcade</li>
+                <li class="list" data-categoria="aventura">Aventura</li>
+                <li class="list" data-categoria="fps">FPS</li>
+            </ul>
+
+            <div class="game-list" id="game-list">
+                <!-- Jogos de Ação -->
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/AssassinsCreedOdyssey.png" alt="Assassin's Creed Odyssey">
+                    <h3>Assassin's Creed Odyssey</h3>
+                    <p class="game-desc">Explore a Grécia Antiga como um mercenário em uma jornada épica cheia de
+                        batalhas e mitologia.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/GodOfWar.png" alt="God Of War">
+                    <h3>God of War</h3>
+                    <p class="game-desc">Kratos enfrenta deuses nórdicos com seu filho Atreus, numa história intensa e
+                        brutal.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/RedDeadRedemption2.png" alt="Red Dead Redemption 2">
+                    <h3>Red Dead Redemption 2</h3>
+                    <p class="game-desc">Um faroeste cinematográfico, com Arthur Morgan vivendo no fim da era dos
+                        fora-da-lei.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/Returnal.png" alt="Returnal">
+                    <h3>Returnal</h3>
+                    <p class="game-desc">Uma astronauta presa em um ciclo infinito de morte em um planeta alienígena
+                        hostil.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/ShadowOfTheColossus.jpg" alt="Shadow Of The Colossus">
+                    <h3>Shadow of the Colossus</h3>
+                    <p class="game-desc">Derrote colossos gigantes para salvar uma vida, em um mundo silencioso e
+                        imenso.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/TombRaider.png" alt="Tomb Raider">
+                    <h3>Tomb Raider</h3>
+                    <p class="game-desc">Lara Croft enfrenta desafios arqueológicos, perigos e inimigos em busca de
+                        artefatos lendários.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/Uncharted4.png" alt="Uncharted 4">
+                    <h3>Uncharted 4</h3>
+                    <p class="game-desc">Nathan Drake parte para uma última aventura cheia de ação, mistério e
+                        exploração.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/Zelda.png" alt="Zelda">
+                    <h3>Zelda</h3>
+                    <p class="game-desc">A eterna missão de Link para salvar o reino de Hyrule e a princesa Zelda.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="acao">
+                    <img src="assets/img/PrinceOfPersia.jpeg" alt="Prince Of Persia">
+                    <h3>Prince of Persia</h3>
+                    <p class="game-desc">Um príncipe habilidoso manipula o tempo para superar inimigos e armadilhas.</p>
+                </div>
+                <!-- Jogos de Arcade -->
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/Cuphead.png" alt="Cuphead">
+                    <h3>Cuphead</h3>
+                    <p class="game-desc">Um jogo de tiro com gráficos inspirados em desenhos animados dos anos 1930 e
+                        dificuldade elevada.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/DonkeyKong.png" alt="Donkey Kong">
+                    <h3>Donkey Kong</h3>
+                    <p class="game-desc">Clássico arcade onde Mario deve resgatar Pauline do gorila Donkey Kong.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/HorizonChaseTurbo.jpeg" alt="Horizon Chase Turbo">
+                    <h3>Horizon Chase Turbo</h3>
+                    <p class="game-desc">Corridas arcade com estética retrô e muita velocidade.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/KatanaZero.jpg" alt="Katana Zero">
+                    <h3>Katana Zero</h3>
+                    <p class="game-desc">Ação frenética com um assassino samurai, onde cada golpe é fatal.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/MortalKombat.jpg" alt="Mortal Kombat">
+                    <h3>Mortal Kombat</h3>
+                    <p class="game-desc">Lutas brutais com personagens icônicos e fatalities sangrentos.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/StreetFighter.jpg" alt="Street Fighter">
+                    <h3>Street Fighter</h3>
+                    <p class="game-desc">Uma das maiores franquias de luta, com personagens famosos e golpes especiais.
+                    </p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/SuperMarioWorld.jpg" alt="Super Mario World">
+                    <h3>Super Mario World</h3>
+                    <p class="game-desc">Mario explora mundos variados para salvar a Princesa Peach de Bowser.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/TeenageMutant.jpg" alt="Teenage Mutant Ninja Turtles">
+                    <h3>Teenage Mutant Ninja Turtles</h3>
+                    <p class="game-desc">As Tartarugas Ninja enfrentam vilões como Shredder em ação cooperativa.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="arcade">
+                    <img src="assets/img/Tekken7.png" alt="Tekken 7">
+                    <h3>Tekken 7</h3>
+                    <p class="game-desc">Lutas intensas com um elenco variado e histórias familiares complexas.</p>
+                </div>
+                <!-- Jogos de Aventura -->
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/Crash.jpg" alt="Crash Bandicoot">
+                    <h3>Crash Bandicoot</h3>
+                    <p class="game-desc">Um marsupial maluco enfrenta desafios em fases cheias de obstáculos e inimigos.
+                    </p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/HogwartsLegacy.jpeg" alt="Hogwarts Legacy">
+                    <h3>Hogwarts Legacy</h3>
+                    <p class="game-desc">Viva como um estudante de Hogwarts e explore o mundo mágico em uma nova
+                        história.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/Minecraft.png" alt="Minecraft">
+                    <h3>Minecraft</h3>
+                    <p class="game-desc">Construa, explore e sobreviva em um mundo aberto feito de blocos.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/NeedForSpeedHeat.png" alt="Need For Speed Heat">
+                    <h3>Need for Speed Heat</h3>
+                    <p class="game-desc">Corridas ilegais de dia e perseguições policiais à noite, com muita
+                        personalização.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/SpiderMan.png" alt="Spider-Man">
+                    <h3>Spider-Man</h3>
+                    <p class="game-desc">Torne-se o Homem-Aranha e proteja Nova York com acrobacias e combates
+                        empolgantes.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/StardewValley.png" alt="Stardew Valley">
+                    <h3>Stardew Valley</h3>
+                    <p class="game-desc">Cultive sua fazenda, faça amizades e explore cavernas nesta aventura relaxante.
+                    </p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/Stray.png" alt="Stray">
+                    <h3>Stray</h3>
+                    <p class="game-desc">Explore uma cidade futurista como um gato, resolvendo puzzles e ajudando robôs.
+                    </p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/SuperMarioOdyssey.png" alt="Super Mario Odyssey">
+                    <h3>Super Mario Odyssey</h3>
+                    <p class="game-desc">Mario viaja pelo mundo usando seu chapéu mágico para transformar e explorar.
+                    </p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="aventura">
+                    <img src="assets/img/TheLastOfUs2.png" alt="The Last Of Us Part II">
+                    <h3>The Last Of Us Part II</h3>
+                    <p class="game-desc">Uma história emocional de vingança e sobrevivência em um mundo
+                        pós-apocalíptico.</p>
+                </div>
+                <!-- Jogos FPS -->
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/Apex.jpg" alt="Apex Legends">
+                    <h3>Apex Legends</h3>
+                    <p class="game-desc">Battle royale frenético com personagens únicos e jogabilidade em equipe.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/CodBo6.jpg" alt="Call of Duty: Black OPS 6">
+                    <h3>Call of Duty: Black OPS 6</h3>
+                    <p class="game-desc">Ação militar intensa em campanhas e modos multiplayer.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/CounterStrike.jpg" alt="Counter-Strike">
+                    <h3>Counter-Strike</h3>
+                    <p class="game-desc">Clássico dos FPS competitivos, com equipes de terroristas e contra-terroristas.
+                    </p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/FarCry4.jpg" alt="Far Cry 4">
+                    <h3>Far Cry 4</h3>
+                    <p class="game-desc">Explore um país fictício do Himalaia, enfrentando um ditador cruel.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/GtaV.jpg" alt="GTA V">
+                    <h3>GTA V</h3>
+                    <p class="game-desc">Três criminosos em Los Santos em missões perigosas e muito tiroteio.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/Paladins.jpg" alt="Paladins">
+                    <h3>Paladins</h3>
+                    <p class="game-desc">Heróis com habilidades únicas batalham em arenas, em estilo MOBA e FPS.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/Rainbow6.png" alt="Rainbow Six Siege">
+                    <h3>Rainbow Six Siege</h3>
+                    <p class="game-desc">Estratégia tática e destruição em combates entre operadores especiais.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/ResidentEvil4.jpg" alt="Resident Evil 4">
+                    <h3>Resident Evil 4</h3>
+                    <p class="game-desc">Leon S. Kennedy enfrenta horrores em uma vila isolada na Espanha.</p>
+                </div>
+                <div class="game-item rgb-card" data-categoria="fps">
+                    <img src="assets/img/Valorant.jpg" alt="Valorant">
+                    <h3>Valorant</h3>
+                    <p class="game-desc">FPS competitivo que mistura habilidades especiais com tiroteio tático.</p>
+                </div>
+            </div>
+            <button id="ver-mais-jogos" class="btn-roxo-rgb" style="margin:32px auto 0 auto;display:block;">Veja mais
+                jogos</button>
+        </div>
+    </section>
+
+    <section id="trailers">
+        <div class="trailers-destaque">
+            <h2>TRAILERS EM DESTAQUE DO MÊS</h2>
+            <div class="trailers-flex">
+                <button class="trailer-arrow left" aria-label="Anterior">&#8592;</button>
+                <div class="trailer-card rgb-card">
+                    <iframe id="trailer-video" width="420" height="236" src="https://www.youtube.com/embed/I65a4O5U_5k"
+                        title="Trailer em destaque" frameborder="0" allowfullscreen></iframe>
+                    <button class="btn-roxo-rgb" id="btn-proximo-trailer" style="margin-top:18px;">Próximo</button>
+                </div>
+                <button class="trailer-arrow right" aria-label="Próximo">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="comunidade">
+        <div class="comunidade">
+            <h2>Comunidade PixelForge</h2>
+            <p>Veja o que os jogadores estão compartilhando e participe da nossa comunidade!</p>
+
+            <div class="comunidade-posts">
+                <div class="post rgb-card">
+                    <img src="assets/img/usuarioIconMasc2.jpeg" alt="Usuário 1">
+                    <h3>Giovane</h3>
+                    <p>"Acabei de zerar o novo jogo da PixelForge, e é INCRÍVEL! Parabéns à equipe!"</p>
+                </div>
+                <div class="post rgb-card">
+                    <img src="assets/img/usuarioIconFem.jpeg" alt="Usuário 2">
+                    <h3>Aline</h3>
+                    <p>"Organizando um campeonato no valorant com a galera! Quem topa?"</p>
+                </div>
+                <div class="post rgb-card">
+                    <img src="assets/img/usuarioIconMasc.jpeg" alt="Usuário 3">
+                    <h3>Jefferson</h3>
+                    <p>"Os melhores jogos que existem!"</p>
+                </div>
+            </div>
+
+            <div class="comunidade-btn">
+                <a href="#contato">Entrar na comunidade</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contato">
+            <img src="" alt="">
+            <div class="form">
+                <form action="https://formsubmit.co/priscila.schloten@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/PixelForge_Studios-master/agradecimento.html">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <h1>Entre em contato conosco!</h1>
+                    <div class="inputBx">
+                        <p>Nome:</p>
+                        <input type="text" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="inputBx">
+                        <p>Email:</p>
+                        <input type="email" name="email" placeholder="Digite seu Email" required>
+                    </div>
+                    <div class="inputBx">
+                        <p>Mensagem:</p>
+                        <textarea name="message" placeholder="Digite aqui sua mensagem" required></textarea>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>PixelForge Studios</span>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#trailers">Trailers</a>
+                <a href="#comunidade">Comunidade</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" title="Instagram"><img
+                        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+                        alt="Instagram" /></a>
+                <a href="#" title="Twitter"><img
+                        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg"
+                        alt="Twitter" /></a>
+                <a href="#" title="YouTube"><img
+                        src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
+                        alt="YouTube" /></a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 PixelForge Studios. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+
+</html>
